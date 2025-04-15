@@ -6,7 +6,6 @@ HOST_URL	= maugusto.42.fr
 up:
 	mkdir -p ~/data/database
 	mkdir -p ~/data/wordpress_files
-	#sudo hostsed add 127.0.0.1 $(HOST_URL)
 	docker compose -p $(NAME) -f $(COMPOSE) up --build || (echo " $(FAIL)" && exit 1)
 
 down :
